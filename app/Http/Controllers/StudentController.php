@@ -20,7 +20,6 @@ class StudentController extends Controller
     public function index()
     {
        
-     
         $students = new Student;
         $students = Student::paginate(10);
         $students = StudentResource::collection($students);
