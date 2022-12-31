@@ -20,7 +20,7 @@ class StudentController extends Controller
     public function index()
     {
        
-        error_log('halo');
+     
         $students = new Student;
         $students = Student::paginate(10);
         $students = StudentResource::collection($students);
@@ -29,7 +29,7 @@ class StudentController extends Controller
     }
     public function search(Request $request)
    {
-        error_log('halo');  
+        
         $students = new Student;
         $src = $request->search;
         if($src == '' || $src == null){

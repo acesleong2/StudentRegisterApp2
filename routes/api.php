@@ -20,6 +20,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get('student/search', [StudentController::class,'search']);
     Route::apiResource('student', StudentController::class);
 });
+Route::post('staff/register',[AuthStaffController::class,'register']);
 Route::post('staff/login',[AuthStaffController::class,'login']);
 
 
